@@ -1,0 +1,233 @@
+/*Apartment page Css*/
+body
+{
+    background-color:whitesmoke;
+	border-style:solid;
+	border-width:1.5px;
+	border-color:#CE9B01;
+	margin:0px 50px 10px 50px;
+}
+
+/*Pictures*/
+
+.Pic0
+{
+	padding-top:30px;
+	margin:auto;
+	padding-bottom:20px;
+}
+.img1
+{
+    width:90%;
+    height:50%;
+}
+#Pic1
+{
+	position:relative;
+	padding:auto;
+	
+}
+#Pic2
+{
+	margin-left:0.8%;
+	position:relative;
+	padding:auto;
+}
+#Pic3
+{
+	margin-left:0.8%;
+	position:relative;
+	padding:auto;
+}
+
+
+/*Image view Slider*/
+.container {
+  position: relative;
+}
+
+.mySlides
+{
+    display:none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.prev {
+  background-color: #CE9B01;
+    opacity:50%;
+  left: 0%;
+    margin-top:10px;
+  border-radius: 3px 0 0 3px;
+}
+.next {
+    background-color: #CE9B01;
+    opacity:50%;
+  right: 0%;
+    margin-top:10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  opacity: 100%;
+    
+}
+.demo
+{
+    opacity:0.6;
+}
+.active,.demo:hover
+{
+    opacity:1;
+    transition:0.3s;
+}
+/*End image viewer*/
+
+/*Paragrph and titles font styling*/
+
+p1
+{
+    color:black;
+    letter-spacing: 2px;
+	text-align:justify;
+	padding-right:7.5%;
+	font-family:Titillium Web, sans-serif;
+	font-size:20px;
+}
+h2
+{
+    font-size: 30px;
+    letter-spacing: 5px;
+    color:#CE9B01;
+	text-align:auto;
+	font-family:Titillium Web , serif;
+    font-weight: 100;
+}
+h3
+{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:red;
+	text-align:auto;
+	font-family: Titillium Web, serif;
+    font-weight: 100;
+}
+p
+{
+    font-size: 15px;
+    font-weight:lighter;
+    color: Black;
+	text-align:justify;
+	padding-right:7.5%;
+	font-family: Raleway, sans-serif;
+	font-size:12;
+}
+label
+{
+    color:black;
+}
+
+/*Aligning sentences*/
+.row{
+	margin-left:7.5%;
+    margin-bottom:0px;
+    margin-top:1px;
+}
+.row:after
+{
+	content:"";
+	display:table;
+	clear:both;
+}
+.col-1
+{
+	float: left;
+	width: 50%;
+}
+
+.col-2
+{
+    float:left;
+    width:30%;
+}
+
+/*Boxes styles*/
+
+.box
+{
+    color: beige;
+    font-family: Calibri ,serif;
+	background-color: #DCC080;
+	width: 50%;
+	border: 1px solid #CE9B01;
+	padding: 10px 0px 175px 8px;
+	position:auto;
+    border-radius: 5px;
+}
+.box2
+{
+    color: beige;
+    font-family: Calibri ,serif;
+	background-color: whitesmoke;
+	width: 90%;
+    margin:0px 7px 30px 0px;
+	border: 1px solid #CE9B01;
+	padding: 10px 0px 150px 8px;
+	position:auto;
+}
+
+/*icons*/
+
+i
+{
+    font-size:25px;
+   color:#CE9B01;
+}
+i:hover
+{
+    opacity: 0.7;
+}
+
+/*buttons*/
+
+.btn2
+{
+    background-color:transparent;
+    border-color:transparent;
+    width:10px;
+    height:10px;
+    
+}
+.btn1
+{
+    margin-top:10px;
+    color:black;
+    border-radius:8px;
+    background-color:white;
+    border-color:#CE9B01;
+    width:150px;
+    height:50px;
+}
+
+#link
+{
+    border-width: 1px;
+    border-style: groove;
+    border-color:#CE9B01;
+    margin:0px 5px 0px 5px;
+}

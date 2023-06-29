@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--linking-->
+		<link rel="stylesheet" href="../css/styles.css" type="text/css" />
+		<title>Add An Apartment Page</title>
+        <script src="../js/script.js"></script>
+	</head>
+		<body>
+			<h2>Post Apartment</h2>
+		
+		<!--Login butotns -->
+				<fieldset>
+				<br>
+				<br>
+			
+            <!--Registration Form-->
+            
+            <form action="../php/post.php"  method="POST" >
+			<div class="row">
+			<div class="col-25">
+			<label>Apartment name</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="apartName" name="apartName" size="100" required>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Apartment City</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="apartCity" name="apartCity" size="100" required>
+			<br>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Rooms</label>
+			</div>
+			<div class="col-75">
+			<input type="number" id="rooms" name="rooms" size="100" required>
+            <br>
+			</div>
+            </div>
+            <div class="row">
+			<div class="col-25">
+			<label>Washrooms</label>
+			</div>
+			<div class="col-75">
+			<input type="number" id="washrooms" name="washrooms" size="100" required>
+            <br>
+			</div>
+            </div>
+			
+			<div class="row">
+            <div class="col-25">
+			<label>Kitchens</label>
+			</div>
+            <div class="col-75">    
+			<input type="number" name="kitchens" id="kitchens" size="100" required>
+			</div>
+			</div>
+                
+            <div class="row">
+			<div class="col-25">
+			<label>Area</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="area" size="100" name="area" placeholder="Squre.ft" required>
+			<br>
+			</div>
+			</div>
+                
+            <div class="row">
+			<div class="col-25">
+			<label>Description</label>
+			</div>
+			<div class="col-75">
+			<textarea type="text" id="des" name="des" size="100"placeholder="About the apartment" required>
+                </textarea>
+			<br>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Price(Rs. M)</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="price" size="100" name="price" placeholder="in Million" required>
+			<br>
+			</div>
+			</div>
+             <!--   
+            <div class="row">
+			<div class="col-25">
+			<label>Add images</label>
+			</div>
+			
+			<div class="col-75">
+			<input type="file" id="addImage" size="10" name="addImage" accept=".png,.gif,.jpg">
+               <button onclick="upload()" id="subImg" name="subImg" value="Add">Add Image</button>
+               <div id="display_image"></div>
+			<br>
+			</div>
+			-->
+			</div>
+		
+			<div class="row">
+			<div class="col-25">
+			<input type="checkbox" name="T&C" id="T&C" onclick="enableButton(this)" required>
+			</div>
+			<div class="col-75">
+			<label>I accept to the user Terms and Conditions of the Appartment Sales PegasusAparments.com</label>
+			</div>
+			</div>
+               
+                <!--End form-->
+			<br>
+			<br>
+			<br>
+            <!--Submit button-->    
+			<center>
+			<button type="submit" name="submit" id="submit" class="btn3" disabled>Post</button>
+			</center>
+            
+			<br>
+			
+                
+				</fieldset>
+			</form>
+		</body>
+</html>

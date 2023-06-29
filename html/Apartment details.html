@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/stylesP.css" type="text/css" />
+        <!-- CSS style google -->
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"> 
+            <script src="https://kit.fontawesome.com/fad24dadb8.js" crossorigin="anonymous"></script>
+	        <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
+            	<title>Apartment Details Page</title>
+	</head>
+    
+		<body>
+		<script src="../js/script.js">
+		</script>
+            
+            <center>
+                <!--Image Slideshow container-->
+            
+                <div class="container">
+                    
+                <div class="mySlides">
+                <img class="Pic0" onload="showSlides(1)"  src="../images/Apartment.jpg" alt="Apartment" width="85%" height="30%">
+                </div>   
+                 <div class="mySlides">
+                     <img class="Pic0" src="../images/Pic1.jpg" alt="Apartment" width="85%" height="30%">
+                </div>
+                
+                 <div class="mySlides">
+                     <img class="Pic0" src="../images/Pic2.jpg" alt="Apartment" width="85%" height="30%">
+                </div>
+                     
+                    <a class="prev" onclick="plusSlides(-1)"> ❮ </a>
+                    <a class="next" onclick="plusSlides(1)">  ❯ </a>
+                </div>
+            </center>
+            
+            <center>
+                <img  class="demo cursor" id="Pic1" src="../images/Apartment.jpg" alt="Pic 1" width="27.5%" height="15%" onclick="currentSlide(1)">  
+                
+		        <img class="demo cursor" id="Pic2" src="../images/Pic1.jpg" alt="Pic 2" width="27.5%" height="15%" onclick="currentSlide(2)">
+                
+		        <img class="demo cursor" id="Pic3" src="../images/Pic2.jpg" alt="Pic 3" width="27.5%" height="15%" onclick="currentSlide(3)">
+                </center>    
+        <br>
+        <br>
+        <br>
+        <br>
+		
+            <!--Apartment Details-->
+            
+		<div class="row">
+		<div class="col-1">
+		<h2>APARTMENT 1</h2>
+		</div>
+		<div class="col-1">
+            
+            <!-- Share and Favourites button-->
+            
+            <p style="margin-top:30px; font-size:20px; font-family:Titillium web,sans-serif; color:"> Add to Favourites &emsp; <button class="btn2"><a href="https://www.youtube.com"><i class="fa-solid fa-heart-circle-plus"></a></i></button>&emsp;&emsp;&emsp;
+		
+                Share 
+            <input type="text" id="link" value="https://w3scools.com" disabled>
+            <button class="btn2" onclick="copyLink()"><i class="fa-regular fa-clipboard"></i></button>
+		</p>
+		
+		</div>
+		</div>
+		
+            <br>
+		<div class="row">
+		<div class="col-1">
+		<h3>Price - 20M</h3>
+		</div>
+            </div>
+        <br>
+		<div class="row">
+		<div class="col-1">
+		<p>Availability - Available</p>
+		</div>
+		<div class="col-1">
+		<p>Bathrooms - 4 attached barthroom</p>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-1">
+		<p>Property Type - House</p>
+		</div>
+		<div class="col-1">
+		<p>Kitchens - 2</p>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-1">
+		<p>Bedrooms - 4</p>
+		</div>
+		<div class="col-1">
+		<p>Area (land) - 1669 Sqr.ft </p>
+		</div>
+		</div>
+		<div class="row">
+		<p>Car Park - Available</p>
+		</div>
+		
+            <!--end apartment details-->
+            
+		<div class="row">
+		
+		<h2>DESCRITPTION</h2>
+		<br>
+		<p>The apartment is suitable for a couples or for a single travelers. It is very cozy and comfortable space, fully designed and furnished by me. 
+		Kitchenette includes small fridge, induction stove, microwave and all necessary cutlery to prepare and enjoy your food.
+		The bathroom consists of a shower, sink with a big front mirror and flushable toilet. Liquid soap and shower gel is included.
+		It sleeps up to 2 people. A double bed (160×200) or two single beds (80×200) are available. Sheets, blankets and linen is included.
+		It is always clean, disinfected and prepared with all amenities for the guests to enjoy their stay and to feel comfortable. 
+		<p>
+		</div>
+		<br>
+		<br>
+		<br>
+		
+            <!--inspection Form-->
+		
+		<div class="row">
+		<div class="box">
+		<div class="col-1">
+		
+		<label for="Time">Inspection time</label>	
+		<br>
+			<input type="time" name="Time">
+			<br>
+            <br>
+			<label for="Date">Inspection Date</label>
+			<br>
+			<input type="date" name="Date">
+		</div>
+		<div class="col-1">
+			<input type="checkbox" name="vaccine">
+			<label>I hearby confirm that I am fully vaccinated. </label>
+			<br>
+            <br>
+			<input type="checkbox" name="guidline">
+			<label>I hearby agree to follow the necessary guidlines set by the owner. </label>
+           <br>
+            <button class="btn1">Confirm Inspection</button>
+		</div>
+            </div>
+		</div>
+            <!--end inspection form-->
+        
+		<div class="row">
+		<h2>SELLER</h2>
+		</div>
+		<div class="row">
+		<div class="col-1">
+		<p>Name - xxxxxxxxxx</p>
+		</div>
+		<div class="col-1">
+		<p>Email - seller1@gmail.com</p>
+		</div>
+		</div>
+		<div class="row">
+		<p>Mobile Number - 07x xxxxxxx</p>
+		</div>
+		<br>
+            
+		<!--Other Apartments-->
+            <div class="row">
+              <div class="col-2">
+                <div class="box2" style="margin:0px 15px 10px 0px">
+                    <img class="img1" src="../images/AP1.jpg">
+                    <br>
+                    <br>
+                    <p1>Apartment 1 </p1>
+                    <p>Location</p>
+                
+                  </div>
+                    </div>
+            
+            <div class="col-2">
+            <div class="box2" style="margin:0px 25px 10px 25px;">
+                <img class="img1" src="../images/AP2.jpg">
+                <br>
+                <br>
+                <p1>Apartment 2 </p1>
+                    <p>location</p>
+                </div>
+                </div>
+            
+                <div class="col-2">
+                    <div class="box2" style="margin:0px 20px 10px 50px;">
+                        <img class="img1" src="../images/AP3.jpg">
+                        <br>
+                        <br>
+                        <p1>Apartment 3 </p1>
+                        <p>location</p>
+                    </div>
+                    </div>
+            </div>
+    
+
+		</body>
+</html>

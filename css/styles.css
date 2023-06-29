@@ -1,0 +1,166 @@
+/*register form styling*/
+fieldset
+{
+	margin:70px;
+	padding-left:40px;
+	padding-right:40px;
+	border-color:#CE9B01;
+	border-width:5;
+	background-color:#DCC080;
+
+}
+body
+{
+	background-color:;
+}
+/*fonts styiling*/
+label
+{
+	font-size:15px;
+	font-family:Arimo,sans-serif;
+	font-weight:bold;
+	color:#333333;
+	text-indent:7px;
+	display:inline-block;
+	padding:10px 20px 20px 0;
+	margin-left:60px;
+}
+h2
+{
+	font-family:Quicksand,sans-serif;
+	text-align:center;
+	font-size:50px;
+	font-weight:lighter;
+	color:#CE9B01;
+}
+h1
+{
+	font-family:Quicksand,sans-serif;
+	text-align:center;
+	font-size:20px;
+	font-weight:lighter;
+	color:#333333;
+}
+
+/*buttons*/
+
+.btn1
+{
+	font-size:1em;
+	margin-left:60px;
+	margin-bottom:20px;
+	width:88.8%;
+	color:white;
+	font-weight:Lighter;
+	padding:11px 20px 9px 5px;
+	background-color:#3e5998;
+}
+.btn1:hover
+{
+	background-color:#5968bd;
+}
+.btn2
+{
+	font-size:1em;
+	margin-left:60px;
+	margin-bottom:40px;
+	width:88.8%;
+	color:black;
+	font-weight:Lighter;
+	padding:11px 20px 9px 5px;
+	background-color:white;
+}
+.btn2:hover
+{
+	background-color:#e0e0e0;
+}
+.btn3
+{
+	font-family:SourceSansPro, sans-serif;
+	color:white;
+	border-radius:7px;
+	font-weight:bold;
+	padding:12px 20px 12px 20px;
+	background-color:#0047fb;
+}
+select
+{
+	display:inline-block;
+	width: 11%;
+	padding:4px 5px;
+	margin-left:10px;
+	border: 1px solid #CE9B01;
+	border-radius: 1px;
+}
+input[type=checkbox]
+{
+	margin:15px 0px 0px 270px;
+	position:relative;
+	padding:auto;
+}
+input[type=number],[type=file]
+{
+    width:50px;
+    margin:2px 0px 2px 11px;
+     border:1px solid #CE9B01;
+	padding:4px 5px 2px 3px ;
+}
+input[type=phone]
+{
+    border:1px solid #CE9B01;
+	padding:4px 6px;
+}
+input[type=radio]
+{
+	margin-top:12px;
+}
+input[type=text],[type=email],[type=password],textarea {
+  
+  width: 90%;
+  padding: 8px 4px;
+  margin-left:10px;
+  border: 1px solid #CE9B01;
+  border-radius: 1px;
+ 
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding:auto;
+}
+.col-25{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  padding:auto;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 8px;
+  padding:auto;
+}
+.fb
+{
+	margin-left:5px;
+}
+a:active{
+	color:white;
+	background-color:transparent;
+	text-decoration:none;
+}
+a:visited
+{
+	color:transparent;
+	text-decoration:none;
+}
+a:link
+{
+	color:white;
+	text-decoration:none;
+}
+G
+{
+	color:#525050;
+}
