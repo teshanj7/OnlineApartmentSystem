@@ -1,0 +1,412 @@
+.post input{
+    width: 100px;
+    position: absolute;
+    left: 28cm;
+    top: 0.7cm;
+    font-size: 15px;
+    font-family: 'Cairo', sans-serif;
+    background: #CCA43D;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filtersection{
+    width: 76%;
+    height: 220px;
+    margin: auto;
+    margin-top: 0.75cm;
+    margin-bottom: 1cm;
+    background: #CCA43D;
+    border: 1px solid rgb(182, 168, 91);
+}
+.multiselect{
+    width: 220px;
+    margin-left: 2cm;
+    margin-top: 0.3cm;
+    position:relative;
+    z-index: 1;
+}
+.selectBox{
+    position: relative;
+}
+.selectBox select{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+    padding-left: 10px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+}
+.overSelect{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    bottom: 0;
+}
+#checkboxes{
+    display: none;
+    box-shadow: 0px 0px 3px rgba(183, 169, 14, 0.9);
+    padding-top: 2px;
+}
+#checkboxes label{
+    display: block;
+    background: #fff;
+    border: 5px solid #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    
+}
+#checkboxes label:hover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+#checkbox1{
+    display: none;
+    box-shadow: 0px 0px 3px rgba(183, 169, 14, 0.9);
+    padding-top: 2px;
+}
+#checkbox1 label{
+    display: block;
+    background: #fff;
+    border: 5px solid #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    
+}
+#checkbox1 label:hover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+#checkbox2{
+    display: none;
+    box-shadow: 0px 0px 3px rgba(183, 169, 14, 0.9);
+    padding-top: 2px;
+}
+#checkbox2 label{
+    display: block;
+    background: #fff;
+    border: 5px solid #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    
+}
+#checkbox2 label:hover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+#checkbox3{
+    display: none;
+    box-shadow: 0px 0px 3px rgba(183, 169, 14, 0.9);
+    padding-top: 2px;
+}
+#checkbox3 label{
+    display: block;
+    background: #fff;
+    border: 5px solid #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    
+}
+#checkbox3 label:hover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.filterbox1{
+    margin-left: 75px;
+    position: absolute;
+    top: 6.15cm;
+    z-index: 1;
+}
+.filterbox2{
+    margin-left: 333px;
+    position: absolute;
+    top: 6.15cm;
+    z-index: 1;
+}
+.filterbox3{
+    margin-left: 590px;
+    position: absolute;
+    top: 6.15cm;
+    z-index: 1;
+}
+.filterbox4{
+    margin-left: 850px;
+    position: absolute;
+    top: 6.15cm;
+    z-index: 1;
+}
+/*
+nav input{
+    display: none;
+}
+nav{ 
+    position: relative;
+    top: 10px;
+    left: 30px;
+    background: #fff;
+    width: 200px;
+    line-height: 25px;
+    padding: 8PX 25px;
+    border-radius: 5px;
+}
+nav label{
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+}
+.filter-button span{
+    float: right;
+    line-height: 25px;
+}
+section div ul input{
+    display: list-item;
+}
+nav ul{
+    position: absolute;
+    list-style: none;
+    background: #fff;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0px 0px 3px rgba(183, 169, 14, 0.9);
+}
+[id^=citydropmenu]:checked + ul{
+    display: block;
+}
+[id^=roomdropmenu]:checked + ul{
+    display: block;
+}
+[id^=wroomdropmenu]:checked + ul{
+    display: block;
+}
+[id^=kitchendropmenu]:checked + ul{
+    display: block;
+}
+nav ul li{
+    line-height: 40px;
+    padding: 0 25px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+nav ul li input{
+    position: relative;
+    left: 4cm;
+}
+*/
+
+/*================Price Range Slider=================*/
+.pricewrap{
+    width: 600px;
+    background: #fff;
+    border: 1px solid #CCA43D;
+    border-radius: 10px;
+    padding: 2px 20px 20px;
+    margin: auto;
+    position: absolute;
+    top: 7.9cm;
+    margin-left: 8cm;
+}
+.price-input{
+    width: 100%;
+    display: flex;
+    margin: 10px 0 30px;
+}
+.price-input .pricefield{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.pricefield input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 10px;
+    border: 1px solid #d70404;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.price-input .seperator{
+    width: 130px;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+.price-slider{
+    height: 5px;
+    border-radius: 5px;
+    background: rgb(217, 217, 217);
+    position: relative;
+}
+.price-slider .progress{
+    height: 5px;
+    left: 15%;
+    right: 62%;
+    position: absolute;
+    border-radius: 5px;
+    background: #d70404;
+}
+.range-input{
+    position: relative;
+}
+.range-input input{
+    position: absolute;
+    top: -5px;
+    height: 5px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    background: #d70404;
+}
+input[type="range"]::-moz-range-thumb{
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    -moz-appearance: none;
+    background: #d70404;
+}
+button{
+    width: 5cm;
+    height: 50px;
+    background: rgb(31, 30, 30);
+    color: #fff;
+    font-size: 19px;
+    position: absolute;
+    left: 27cm;
+    top: 9.25cm;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.fa-magnifying-glass{
+    position: relative;
+    right: 0.5cm;
+    top: 2px;
+    font-size: 19px;
+    color: #fff;
+}
+.card-container{
+    display: inline-flex;
+    margin-left: 4%;
+    background-image: url(../images/apartmentsPage/123.jpg);
+    flex-wrap: wrap;
+    color:aliceblue;
+}
+.card{
+    background: rgb(226, 230, 193);
+    width: 330px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #CCA43D;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+.apart-img{
+    background: #CCA43D;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+}
+h2, p, h5{
+    margin-left: 20px;
+    color: black;
+}
+h2{
+    font-size: 18px;
+}
+.price{
+    color: red;
+    font-size: 18px;
+}
+.card ul li{
+    list-style: none;
+    display: inline-flex;
+    padding: 0 5px;
+}
+.fa-bed, .fa-bath, .fa-maximize{
+    font-size: 25px;
+    padding: 15px 0 0 17px;
+    color: black;
+}
+.apartment1{
+    background-image: url(../images/bed\ 01.jpg);
+}
+.apartment2{
+    background-image: url(../images/Shangrilla-residence-colombo-3br-2.jpg);
+}
+.apartment3{
+    background-image: url(../images/livingroom3.jpg);
+}
+.apartment4{
+    background-image: url(../images/apartmentsPage/Loft\ Mirissa.jpeg);
+}
+.apartment5{
+    background-image: url(../images/apartmentsPage/Nilaveli\ Ocean\ Front\ in\ Trincomalee.jpg);
+}
+.apartment6{
+    background-image: url(../images/apartmentsPage/Bagatalle\ Road\,\ Colombo\ 03.jpg);
+}
+.apartment7{
+    background-image: url(../images/apartmentsPage/cinnamon-life-live-header-mob.jpg);
+}
+.apartment8{
+    background-image: url(../images/apartmentsPage/fairway-sunset-serviced-apartments-in-galle-sri-lanka-home-3.jpg);
+}
+.apartment9{
+    background-image: url(../images/apartmentsPage/Beachfront\ Apartments\ Balapitiya.jpg);
+}
+.apartment10{
+    background-image: url(../images/apartmentsPage/Colombo.jpg);
+}
+.apartment11{
+    background-image: url(../images/living\ room\ 2.jpg);
+    background-size: 180%;
+    background-position: left;
+}
+.apartment12{
+    background-image: url(../images/kitchen3.jpg);
+}
+#demo{
+    padding-top: 1.7cm;
+    padding-left: 13.9cm;
+    color: rgb(181, 179, 179);
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+h4{
+    text-decoration: none;
+    text-align: center;
+    margin-top: -18px;
+    position: relative;
+    top: 0.05cm;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+}

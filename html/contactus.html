@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="../styles/stylesContactus.css">
+        <link rel="stylesheet" href="../font awesome/css/all.css">
+        
+    </head>
+    <body>
+        <h1>Contact Us</h1>
+        
+    <div>
+        <div class="mobile">
+            
+            <i class="fa-solid fa-phone"></i>
+            <h3>24/7 Available</h3>
+            <p class="contact">Hot-line: +9411-2711234 / +9411-2784352</p>
+            <p class="contact">Mobile: +9777-1234567 / +9477-7654321</p>
+
+        </div>
+        <div class="customeragent">
+            <i class="fa-solid fa-headset"></i>
+            <h3>Need a Customer Care Agent?</h3>
+
+            <button class="connect">Connect</button>
+
+        </div>
+    </div>
+    
+    <div>
+        <div class="email">
+            <i class="fa-solid fa-at"></i>
+            <h3>write us at,</h3>
+            <p class="contact" id="mail">info.pegasusapartments@gmail.com</p>
+        </div>
+        <div class="smedia">
+            <h4>Our Social Media Networks:</h4>
+            <a href="https://www.facebook.com/sliit.lk"><button class="socialmedia" id="fb"><i class="fa-brands fa-facebook" id="facebook" ></i></button></a>
+            <a href="https://www.instagram.com/sliit.life/"><button class="socialmedia" id="ig"><i class="fa-brands fa-instagram" id="instagram"></i></button></a>
+            <a href="https://twitter.com/SLIITinfo"><button class="socialmedia" id="twt"><i class="fa-brands fa-twitter" id="twitter"></i></button></a>
+        </div>
+    </div>
+    
+        <h2>Visit Us</h2>
+        <i class="fa-solid fa-location-dot" id="locationID"></i>
+        <p class="address">No: 123, <br>Green Path, <br> Colombo 07 </p>
+
+        <a href="https://www.google.com/maps/place/Sri+Lanka+Institute+of+Information+Technology/@6.9146775,79.9729445,15z/data=!4m5!3m4!1s0x0:0x2c63e344ab9a7536!8m2!3d6.9146775!4d79.9729445"><button class="googlemaps"></button></a>
+        <a href="https://maps.apple.com/?address=New%20Kandy%20Road,%2010115%20Malabe,%20Sri%20Lanka&auid=10118025645483159683&ll=6.914642,79.973152&lsp=9902&q=SLIIT&_ext=CisKBQgEEM8BCgQIBRADCgQIBhAZCgQIChAACgQIUhAHCgQIVRANCgQIWRABEiQpYGzGDs+nG0AxPCUxUjn+U0A5BMTJolWqG0BBJkqMr4f+U0A%3D&t=m"><button class="applemaps"></button></a>
+        
+
+        <h5>Submit your questions below;</h5>
+        <form action="../php/matter.php" method="post" class="matterform">
+            Select user type:<br>
+            <input type="radio" value="C" name="userType" checked> Customer 
+            <input type="radio" value="S" name="userType"> Seller <br><br>
+            
+            Subject of your matter: <br>
+            <input type="text" name="subject" placeholder="Subject" size="120"><br><br>
+
+            E-mail:<br>
+            <input type="email" name="userEmail" placeholder="email" size="60" > <br><br>
+
+            Your Matter:<br>
+            <textarea name="userMatter" rows="10" cols="120" ></textarea> <br><br>
+
+            <input type="checkbox" class="inputStyle" id="checkBox" onclick="enableButton()"> Accept Privacy Policy and Terms <br><br>
+
+            <center>
+                <input type="submit" id="submitBtn" disabled>
+            </center>
+        </form>
+        <script src="../js/contactmyScript.js"></script>
+    </body>
+</html>

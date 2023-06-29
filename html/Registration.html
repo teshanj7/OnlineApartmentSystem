@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--linking-->
+		<link rel="stylesheet" href="../css/styles.css" type="text/css" />
+		<title>Registration Page</title>
+        <script src="../js/script.js"></script>
+	</head>
+		<body>
+			<h2>SIGN UP</h2>
+		
+		<!--Login butotns -->
+				<fieldset>
+				<br>
+				<br>
+				<div class="row">
+				<button class="btn1"><img class="fb" src="../images/Fb.png" width="10" height="20" align="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj29vaw4u_3AhXHEogKHfTOC1UQjBB6BAgFEAE&url=https%3A%2F%2Fwww.facebook.com%2Flogin%2F&usg=AOvVaw2NEj8NwnxhOue64pSijk7e">Login with Facebook</a></button>
+				</div>
+				<div class="row">
+				<button class="btn2"><img src="../images/Gle.ico" width="20" height="20" align="left"><a href="https://accounts.google.com/servicelogin/webreauth?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><G>Login with Google</G></a></button>
+				</div>
+                    
+            <!--Registration Form-->
+            
+            <form action="Reg.php"  method="post" onsubmit="checkPassword()">
+			<div class="row">
+			<div class="col-25">
+			<label>Your First name</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="FirstName" name="Firstname" size="100" required>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Your Surname</label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="Surname" name="Surname" size="100" required>
+			<br>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Email</label>
+			</div>
+			<div class="col-75">
+			<input type="email" id="Email" size="100" name="Email" pattern="[Aa-Zz0-9]+@+[a-z]+\.[a-z]" required>
+			<br>
+			</div>
+			</div>
+            <div class="row">
+			<div class="col-25">
+			<label>Address</label>
+			</div>
+			<div class="col-75">
+			<textarea type="text" id="Address" name="Address" size="100" required>
+                </textarea>
+                <br>
+			</div>
+			
+			<div class="row">
+			<div class="col-25">
+			<label>Create Password</label>
+			</div>
+			<div class="col-75">
+			<input type="password" id="pass1" size="80" name="pass1" pattern="[Aa-Zz0-9]{8,20}" required>
+			<br>
+			</div>
+			</div>
+			
+			<div class="row">
+			<div class="col-25">
+			<label>Confirm Password</label>
+			</div>
+			<div class="col-75">
+			<input type="password" id="pass2" name="pass2" size="80" pattern="[Aa-Zz0-9]{8,20}" required>
+			<br>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<label>Mobile Number</label>
+			</div>
+			<div class="col-75">
+			<select name="Cno">
+				<option>+94</option>
+				<option>+266</option>
+			</select>
+			
+			<input type="phone" placeholder="123-4567890" name="telephone" pattern="[0-9]{3}-[0-9]{7}">
+			</div>
+			</div>
+			
+			
+			<div class="row">
+			<div class="col-25">
+			<label>Gender </label>
+			</div>
+			<input type="radio" name="Gender" value="female">Female
+			<input type="radio" name="Gender" value="male">Male
+                <input type="radio" name="Gender" value="other">Other
+			<br>
+			<br>
+			</div>
+		
+			<br>
+			<br>
+                    
+			<div class="row">
+			<div class="col-25">
+			<input type="checkbox" name="News" id="News">
+			</div>
+			<div class="col-75">
+			<label>Recieve our latest news to email.</label>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-25">
+			<input type="checkbox" name="T&C" id="T&C" onclick="enableButton(this)" required>
+			</div>
+			<div class="col-75">
+			<label>I accept to the user Terms and Conditions of the Appartment Sales PegasusAparments.com</label>
+			</div>
+			</div>
+               
+                <!--End form-->
+			<br>
+			<br>
+			<br>
+            <!--Submit button-->    
+			<center>
+			<button type="submit" name="submit" id="submit" class="btn3" disabled>Register</button>
+			</center>
+            
+			<br>
+			
+                
+				</fieldset>
+			</form>
+		</body>
+</html>

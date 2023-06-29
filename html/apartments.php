@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegasus Aparments</title>
+    <link rel="shortcut icon" type="x-icon" href="../images/logo3.png">
+    <link rel="stylesheet" href="../css/mainCSS.css">
+    <link rel="stylesheet" href="../css/ApartmentCSS - Copy.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../font awesome/css/all.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Macondo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Macondo&family=Padauk&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <section>
+            <div class="account">
+                <div class="post">
+                    <a href="../html/Add apartment.html"><input type="button" value="Post an Add"></a>
+                </div>
+                <ul>
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <li><a href="">Log In</a></li>
+                    <li><a href="">Sign Up</a></li>
+                    <span><i class="fa-solid fa-circle-user"></i></span>
+                </ul>
+            </div>
+            <div id="main_menu">
+                <div class="logo">
+                    <a href=""><img src="../images/logo3.png" alt=""></a>
+                </div>
+                <div class="header_home">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="apartments.php" class="active">APARTMENTS</a></li>
+                        <li><a href="aboutus.html">ABOUT US</a></li>
+                        <li><a href="">NEWS</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                        <li><a href="">HELP US</a></li>
+                    </ul>
+                </div>
+            </div>     
+        </section>
+    </header>
+    <section class="filtersection">
+    <!--
+        <div class="filterbox1">
+            <nav>
+                <label for="citydropmenu" class="filter-button">Cities
+                    <span class="fas fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="citydropmenu">
+                <ul class="dropmenu">
+                    <li class="city"><a href=""> Colombo</a></li>
+                    <li class="city"><a href=""> Negombo</a></li>
+                    <li class="city"><a href=""> Galle</a></li>
+                    <li class="city"><a href=""> Hambantota</a></li>
+                    <li class="city"><a href=""> Trincomalee</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="filterbox2">
+            <nav>
+                <label for="roomdropmenu" class="filter-button">Rooms
+                    <span class="fas fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="roomdropmenu">
+                <ul class="dropmenu">
+                    <li class="room"><a href="">1</a></li>
+                    <li class="room"><a href="">2</a></li>
+                    <li class="room"><a href="">3</a></li>
+                    <li class="room"><a href="">4</a></li>
+                    <li class="room"><a href="">5</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="filterbox3">
+            <nav>
+                <label for="wroomdropmenu" class="filter-button">Washrooms
+                    <span class="fas fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="wroomdropmenu">
+                <ul class="dropmenu">
+                    <li class="wroom"><a href="">1</a></li>
+                    <li class="wroom"><a href="">2</a></li>
+                    <li class="wroom"><a href="">3</a></li>
+                    <li class="wroom"><a href="">4</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="filterbox4">
+            <nav>
+                <label for="kitchendropmenu" class="filter-button">Kitchens
+                    <span class="fas fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="kitchendropmenu">
+                <ul class="dropmenu">
+                    <li class="kitchen"><a href="">1</a></li>
+                    <li class="kitchen"><a href="">2</a></li>
+                </ul>
+            </nav>
+        </div>
+    -->    
+    <div class="multiselect filterbox1">
+        <div class="selectBox" onclick="showCheckBoxes()">
+            <select>
+                <option>Cities</option>
+            </select>
+            <div class="overSelect"></div>
+            <?php
+                $con = mysqli_connect("localhost","root","","add_apartment");
+
+                $brand_query = "SELECT * FROM apart_details GROUP BY Apart_City ";
+                $brand_query_run = mysqli_query($con,$brand_query);
+
+                if(mysqli_num_rows($brand_query_run)>0)
+                {
+                    foreach($brand_query_run as $brandlist)
+                    {
+                        ?>  
+                            <div id="checkboxes">
+                                <label for="city1"><input type="checkbox" id="city1" name="brands[]" value="<?=  $brandlist['Apart_ID']; ?>"></label>
+                                <?=  $brandlist['Apart_City']; ?>
+                            </div>                            
+                        <?php
+                    }
+                }
+                else
+                {
+                    echo "No Cities";
+                }
+            ?>
+        </div>
+        
+    </div>
+    <div class="multiselect filterbox2">
+        <div class="selectBox" onclick="showCheckBox1()">
+            <select>
+                <option>Rooms</option>
+            </select>
+            <div class="overSelect"></div>
+        </div>
+        <div id="checkbox1">
+            <label for="room1"><input type="checkbox" id="room1"/>1</label>
+            <label for="room2"><input type="checkbox" id="room2"/>2</label>
+            <label for="room3"><input type="checkbox" id="room3"/>3</label>
+            <label for="room4"><input type="checkbox" id="room4"/>4</label>
+            <label for="room5"><input type="checkbox" id="room5"/>5</label>
+        </div>    
+    </div> 
+    <div class="multiselect filterbox3">
+        <div class="selectBox" onclick="showCheckBox2()">
+            <select>
+                <option>Washrooms</option>
+            </select>
+            <div class="overSelect"></div>
+        </div>
+        <div id="checkbox2" >
+            <label for="washroom1"><input type="checkbox" id="washroom1"/>1</label>
+            <label for="washroom2"><input type="checkbox" id="washroom2"/>2</label>
+            <label for="washroom3"><input type="checkbox" id="washroom3"/>3</label>
+            <label for="washroom4"><input type="checkbox" id="washroom4"/>4</label>
+        </div>    
+    </div> 
+    <div class="multiselect filterbox4">
+        <div class="selectBox" onclick="showCheckBox3()">
+            <select>
+                <option>Kitchens</option>
+            </select>
+            <div class="overSelect"></div>
+        </div>
+        <div id="checkbox3" >
+            <label for="kitchen1"><input type="checkbox" id="kitchen1"/>1</label>
+            <label for="kitchen2"><input type="checkbox" id="kitchen2"/>2</label>
+        </div>    
+    </div>  
+        
+    </section>
+    <div class="pricewrap">
+        <h3>Price Range</h3>
+        <div class="price-input">
+            <div class="pricefield">
+                <span>Min <br>(Rs.M)</span>
+                <input type="number" class="input-min" value="25">
+            </div>
+            <div class="seperator">|</div>
+            <div class="pricefield">
+                <span>Max<br>(Rs.M)</span>
+                <input type="number" class="input-max" value="75">
+            </div>
+        </div>
+        <div class="price-slider">
+            <div class="progress"></div>
+        </div>
+        <div class="range-input">
+            <input type="range" class="range-min" min="0" max="200" value="25" step="1">
+            <input type="range" class="range-max" min="0" max="200" value="75" step="1">
+        </div>
+    </div>  
+    <div class="submit-btn">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    </div>
+    <script>
+        let priceGap = 1;
+
+        const rangeInput= document.querySelectorAll(".range-input input"),
+        priceInput= document.querySelectorAll(".price-input input"),
+        progress = document.querySelector(".price-slider .progress");
+
+        priceInput.forEach(input =>{
+            input.addEventListener("input",e=>{
+            //getting two INPUTS of value and parsing them to numbers
+                let minVal = parseInt(priceInput[0].value),
+                maxVal = parseInt(priceInput[1].value);
+
+                if((maxVal - minVal >= priceGap)&& maxVal <= 200){
+                    if(e.target.className === "input-min"){
+                        rangeInput[0].value = minVal;
+                        progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    }
+                    else{
+                        rangeInput[1].value = maxVal;
+                        progress.style.right = 100-(maxVal / rangeInput[1].max) * 100 + "%";            
+                    }
+                }
+                
+            });
+        });
+        rangeInput.forEach(input =>{
+            input.addEventListener("input",e=>{
+            //getting two ranges of value and parsing them to numbers
+                let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+
+                if(maxVal - minVal < priceGap){
+                    if(e.target.className === "range-min"){
+                        rangeInput[0].value = maxVal - priceGap;
+                    }
+                    else{
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                }
+                else{
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    progress.style.right = 100-(maxVal / rangeInput[1].max) * 100 + "%";            
+                }
+            });
+        });
+    </script> 
+
+    <section class="card-container">
+            <div class="card">
+                <div class="apart-img apartment1"></div>
+                <h2>447 Luna Tower-Union Place,<br> Colombo 02</h2>
+                <h5>Location: Union Place</h5>
+                <h2 class="price">LKR.75.2M </h2>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i></li>
+                    <li>2</li>
+                    <li><i class="fa-solid fa-bath"></i></li>
+                    <li>1</li>
+                    <i class="fa-solid fa-maximize"></i>
+                    <li>1,679 Sq.Ft</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="apart-img apartment2"></div>
+                <h2>Shangri-La Residencies <br> Colombo 02</h2>
+                <h5>Location: Colombo 02 </h5>
+                <h2 class="price">LKR.85M </h2>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i></li>
+                    <li>3</li>
+                    <li><i class="fa-solid fa-bath"></i></li>
+                    <li>2</li>
+                    <i class="fa-solid fa-maximize"></i>
+                    <li>1,700 Sq.Ft</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="apart-img apartment3"></div>
+                <h2>No.1/2 Havlock Supreme <br>Colombo 02</h2>
+                <h5>Location: Colombo 02</h5>
+                <h2 class="price">LKR.77M</h2>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i></li>
+                    <li>2</li>
+                    <li><i class="fa-solid fa-bath"></i></li>
+                    <li>2</li>
+                    <i class="fa-solid fa-maximize"></i>
+                    <li>1500 Sq.Ft</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="apart-img apartment4"></div>
+                <h2>Loft Mirissa Apartments <br>Mirissa</h2>
+                <h5>Location: Galle</h5>
+                <h2 class="price">LKR. 65M</h2>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i></li>
+                    <li>2</li>
+                    <li><i class="fa-solid fa-bath"></i></li>
+                    <li>1</li>
+                    <i class="fa-solid fa-maximize"></i>
+                    <li>1500 Sq.Ft</li>
+                </ul>
+            </div>
+    </section>
+    <section class="card-container">
+        <div class="card">
+            <div class="apart-img apartment5"></div>
+            <h2>Nilaveli Ocean Front Residencies <br>Trincomalee</h2>
+            <h5>Location: Trincomalee</h5>
+            <h2 class="price">LKR. 45M</h2>
+            <ul>
+                <li><i class="fa-solid fa-bed"></i></li>
+                <li>1</li>
+                <li><i class="fa-solid fa-bath"></i></li>
+                <li>1</li>
+                <i class="fa-solid fa-maximize"></i>
+                <li>1050 Sq.Ft</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="apart-img apartment6"></div>
+            <h2>Glenn Home Residencies <br>Colombo 03</h2>
+            <h5>Location: Dehiwala</h5>
+            <h2 class="price">LKR.62M</h2>
+            <ul>
+                <li><i class="fa-solid fa-bed"></i></li>
+                <li>2</li>
+                <li><i class="fa-solid fa-bath"></i></li>
+                <li>2</li>
+                <i class="fa-solid fa-maximize"></i>
+                <li>1200 Sq.Ft</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="apart-img apartment7"></div>
+            <h2>Cinomon Residencies <br>Kirinda</h2>
+            <h5>Location: Hambantota</h5>
+            <h2 class="price">LKR.78M</h2>
+            <ul>
+                <li><i class="fa-solid fa-bed"></i></li>
+                <li>3</li>
+                <li><i class="fa-solid fa-bath"></i></li>
+                <li>2</li>
+                <i class="fa-solid fa-maximize"></i>
+                <li>1600 Sq.Ft</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="apart-img apartment8"></div>
+            <h2>Fairwell Sunset Residencies <br>Weligama</h2>
+            <h5>Location: Galle</h5>
+            <h2 class="price">LKR.64M </h2>
+            <ul>
+                <li><i class="fa-solid fa-bed"></i></li>
+                <li>3</li>
+                <li><i class="fa-solid fa-bath"></i></li>
+                <li>2</li>
+                <i class="fa-solid fa-maximize"></i>
+                <li>1400 Sq.Ft</li>
+            </ul>
+        </div>
+    </section>
+    <section class="card-container">
+    <div class="card">
+        <div class="apart-img apartment9"></div>
+        <h2>Beach Front Homes <br>Balapitiya</h2>
+        <h5>Location:Galle </h5>
+        <h2 class="price">LKR.105M </h2>
+        <ul>
+            <li><i class="fa-solid fa-bed"></i></li>
+            <li>4</li>
+            <li><i class="fa-solid fa-bath"></i></li>
+            <li>3</li>
+            <i class="fa-solid fa-maximize"></i>
+            <li>1950 Sq.Ft</li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="apart-img apartment10"></div>
+        <h2>Zillion Apartments <br>Nugegoda</h2>
+        <h5>Location: Colombo 09 </h5>
+        <h2 class="price">LKR.97M </h2>
+        <ul>
+            <li><i class="fa-solid fa-bed"></i></li>
+            <li>3</li>
+            <li><i class="fa-solid fa-bath"></i></li>
+            <li>3</li>
+            <i class="fa-solid fa-maximize"></i>
+            <li>1675 Sq.Ft</li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="apart-img apartment11"></div>
+        <h2>Shaghai Royals <br>Miriswatte</h2>
+        <h5>Location:Negombo</h5>
+        <h2 class="price">LKR.84M </h2>
+        <ul>
+            <li><i class="fa-solid fa-bed"></i></li>
+            <li>2</li>
+            <li><i class="fa-solid fa-bath"></i></li>
+            <li>2</li>
+            <i class="fa-solid fa-maximize"></i>
+            <li>1050 Sq.Ft</li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="apart-img apartment12"></div>
+        <h2>Grandeeza Homes <br>Kurana</h2>
+        <h5>Location: Negombo</h5>
+        <h2 class="price">LKR. 55M</h2>
+        <ul>
+            <li><i class="fa-solid fa-bed"></i></li>
+            <li>1</li>
+            <li><i class="fa-solid fa-bath"></i></li>
+            <li>2</li>
+            <i class="fa-solid fa-maximize"></i>
+            <li>950 Sq.Ft</li>
+        </ul>
+    </div>
+    </section>
+    <footer class="foot">
+        <div class="foot_info">
+            <div class="footer_logo">
+                <a href="home.html"><img src="../images/logo3.png" alt=""></a>
+            </div>
+            <div class="footer_contacts">
+                <ul>
+                    <i class="fa-solid fa-phone"><a href="#"></a></i>
+                    <li>Hotline</li>
+                    <i class="fa-solid fa-at"></i>
+                    <li>email</li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <li>locate us</li>
+                    
+                </ul>
+            </div>
+            <div class="contact_data">
+                <ul>
+                    <li class="number"><a href="">+94 77 123 4567</a></li>
+                    <li class="mail"><a href="">info.pegasusapartments.lk</a></li>
+                </ul>
+                <ul>
+                    <li class="address">123/ Green Path,</li>
+                    <li class="address01">Colombo 07</li>
+                </ul>
+            </div>
+        </div>            
+        <div class="bottom_nav">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">CONTACT US</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">PRIVACY POLICY</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="icon">
+                <span><i class="fa-brands fa-facebook"></i></a></span>        
+            </div>
+            <div class="icon">
+                <span><i class="fa-brands fa-instagram"></i></span>
+            </div>
+            <div class="icon">
+                <span><i class="fa-brands fa-twitter"></i></span>
+            </div>
+            <div class="icon">
+                <span><i class="fa-brands fa-linkedin-in"></i></span>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p id="demo"></p>
+            <script type="text/javascript">
+                const d = new Date();
+                document.getElementById("demo").innerHTML = d.getFullYear();
+            </script>
+            <h4>&copy; PEGASUS APARTMENTS PLC. ALL RIGHTS RESERVED</h4>
+        </div>    
+    </footer >    
+</body>
+</html>
